@@ -1,0 +1,15 @@
+
+mdpreview is a live preview app for markdown files. I use as WYSIWYG view when I edit markdown
+files in a regular text editor.
+
+Dependencies
+------------------
+
+ * Qt
+ * libmarkdown
+
+Build Instructions
+------------------
+To build mdpreview use qmake
+    $ qmake && make
+
