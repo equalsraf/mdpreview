@@ -43,7 +43,7 @@ void MarkdownView::loadFile()
 	mkd_compile(html, 0);
 	char *t;
 	int len = mkd_document(html, &t);
-	setHtml(QString(t));
+	setHtml(QString::fromLocal8Bit(t));
 	mkd_cleanup(html);
 	
 	qDebug() << __func__;
