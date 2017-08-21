@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
 A markdown live preview
 """
@@ -31,7 +31,7 @@ class MarkdownView(QWebView):
         if not QFileInfo(self.path).exists():
             return
 
-        inp = open(self.path).read().decode(self.encoding)
+        inp = open(self.path).read()
         self.setHtml(markdown.markdown(inp, extensions=['meta', 'codehilite']))
 
 app = QApplication(sys.argv)
